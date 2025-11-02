@@ -28,9 +28,9 @@ class CuroPrompt < Formula
       "-X main.GitCommit=#{version_str}"
     ].join(" ")
     
-    # Use system with proper argument passing
-    system "go", "build", "-ldflags", ldflags,
-           "-o", bin/"curo-prompt", "./cmd/curo-prompt"
+    # Use shell command to ensure ldflags is passed as single quoted string
+    # Ruby's system with array splits ldflags by spaces, causing issues
+    system("go build -ldflags '#{ldflags}' -o #{bin}/curo-prompt ./cmd/curo-prompt")
   end
 
   test do
