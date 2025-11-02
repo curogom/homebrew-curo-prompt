@@ -14,11 +14,14 @@ class CuroPrompt < Formula
 
   def install
     # Build the binary with version info
+    version_str = version.to_s
+    build_time = Time.now.utc.strftime("%Y-%m-%d_%H:%M:%S")
+    
     ldflags = %W[
       -s -w
-      -X main.Version=#{version}
-      -X main.BuildTime=#{Time.now.utc.iso8601}
-      -X main.GitCommit=#{version}
+      -X main.Version=#{version_str}
+      -X main.BuildTime=#{build_time}
+      -X main.GitCommit=#{version_str}
     ].join(" ")
     
     system "go", "build", "-ldflags", ldflags,
