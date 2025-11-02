@@ -8,7 +8,7 @@ class CuroPrompt < Formula
   url "https://github.com/curogom/curo-prompt/archive/refs/tags/v0.1.1.tar.gz"
   sha256 "db83ed869a533375c41ceaaf04d53f9d73efc64214b3aae1ce3ff9da43e85b9b"
   license "Apache-2.0"
-  version "0.1.0"
+  version "0.1.1"
   head "https://github.com/curogom/curo-prompt.git", branch: "main"
 
   depends_on "go" => :build
