@@ -18,8 +18,9 @@ class CuroPrompt < Formula
     version_str = version.to_s
     build_time = Time.now.utc.strftime("%Y-%m-%d_%H:%M:%S")
     
-    # Build ldflags as a single string for -ldflags flag
-    ldflags_str = [
+    # Build ldflags as a single quoted string for -ldflags flag
+    # Important: All flags must be in one string passed to -ldflags
+    ldflags = [
       "-s",
       "-w",
       "-X main.Version=#{version_str}",
@@ -27,7 +28,8 @@ class CuroPrompt < Formula
       "-X main.GitCommit=#{version_str}"
     ].join(" ")
     
-    system "go", "build", "-ldflags", ldflags_str,
+    # Use system with proper argument passing
+    system "go", "build", "-ldflags", ldflags,
            "-o", bin/"curo-prompt", "./cmd/curo-prompt"
   end
 
