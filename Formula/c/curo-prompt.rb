@@ -5,10 +5,10 @@
 class CuroPrompt < Formula
   desc "CLI tool for analyzing, evaluating, and optimizing LLM prompts"
   homepage "https://github.com/curogom/curo-prompt"
-  url "https://github.com/curogom/curo-prompt/archive/refs/tags/v0.1.2.tar.gz"
-  sha256 "ac3140901186c140cdb006ee8f002dffa61eb4cbc4bcab9b72ce36380115335d"
+  url "https://github.com/curogom/curo-prompt/archive/refs/tags/v0.1.3.tar.gz"
+  sha256 "cb3a8e4649f2b589df531f8c76aed9278fa12f72ed44d5d650fe439ca0775dba"
   license "Apache-2.0"
-  version "0.1.2"
+  version "0.1.3"
   head "https://github.com/curogom/curo-prompt.git", branch: "main"
 
   depends_on "go" => :build
