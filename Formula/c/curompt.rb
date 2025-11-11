@@ -6,7 +6,7 @@ class Curompt < Formula
   desc "CLI tool for analyzing, evaluating, and optimizing LLM prompts"
   homepage "https://github.com/curogom/curompt"
   url "https://github.com/curogom/curompt/archive/refs/tags/v1.0.0.tar.gz"
-  sha256 "e8e56b51d1c880932cbdd3ed115b944cf19acaf659aa1b771ea8e8b5b49bf9ec"
+  sha256 "3c0f6872dfa50854f95efd474905d1d252386fec0f51a52e7ac10bbbebcd47d3"
   license "Apache-2.0"
   version "1.0.0"
   head "https://github.com/curogom/curompt.git", branch: "main"
